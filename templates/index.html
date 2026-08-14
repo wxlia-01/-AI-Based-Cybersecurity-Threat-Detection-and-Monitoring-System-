@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CyberShield — AI Threat Detector</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+<!-- ── Header ──────────────────────────────────────────── -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-icon">🛡</span>
+      <span class="logo-text">CyberShield</span>
+      <span class="logo-sub">AI Threat Detector</span>
+    </div>
+    <div class="header-badge">
+      <span class="dot green"></span> Live &amp; Ready
+    </div>
+  </div>
+</header>
+
+<!-- ── Main Layout ─────────────────────────────────────── -->
+<main class="layout">
+
+  <!-- Left column -->
+  <section class="card input-card">
+    <h2 class="card-title">Analyse Input</h2>
+    <p class="card-desc">Paste a URL, IP address, or message text below.</p>
+
+    <!-- Type selector -->
+    <div class="type-selector" id="typeSelector">
+      <button class="type-btn active" data-type="auto">Auto-Detect</button>
+      <button class="type-btn" data-type="url">URL</button>
+      <button class="type-btn" data-type="ip">IP Address</button>
+      <button class="type-btn" data-type="text">Message</button>
+    </div>
+
+    <!-- Input area -->
+    <textarea
+      id="inputArea"
+      class="input-area"
+      rows="5"
+      placeholder="Enter a URL, IP address, or message to analyse…"
+      spellcheck="false"
+    ></textarea>
+
+    <div class="input-actions">
+      <button class="btn btn-primary" id="scanBtn" onclick="runScan()">
+        <span id="scanBtnText">🔍 Scan</span>
+      </button>
+      <button class="btn btn-ghost" onclick="clearAll()">Clear</button>
+    </div>
+
+    <!-- Quick examples -->
+    <div class="examples-section">
+      <p class="examples-label">Quick examples:</p>
+      <div class="examples-grid" id="examplesGrid">
+        <span class="example-chip loading">Loading…</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Right column -->
+  <section class="results-column">
+
+    <!-- Result card -->
+    <div class="card result-card" id="resultCard" style="display:none;">
+      <div class="result-header">
+        <div class="result-verdict" id="resultVerdict">
+          <span class="verdict-icon" id="verdictIcon"></span>
+          <span class="verdict-label" id="verdictLabel"></span>
+        </div>
+        <div class="result-meta">
+          <span class="input-type-badge" id="inputTypeBadge"></span>
+          <span class="confidence-badge" id="confidenceBadge"></span>
+        </div>
+      </div>
+
+      <!-- Probability bar chart -->
+      <div class="prob-bars" id="probBars"></div>
+
+      <!-- Explanations -->
+      <div class="explain-section">
+        <p class="section-label">Why this result?</p>
+        <ul class="explain-list" id="explainList"></ul>
+      </div>
+
+      <!-- Feature grid -->
+      <details class="feature-details">
+        <summary>Raw feature values</summary>
+        <div class="feature-grid" id="featureGrid"></div>
+      </details>
+    </div>
+
+    <!-- Placeholder when no result yet -->
+    <div class="card placeholder-card" id="placeholderCard">
+      <div class="placeholder-inner">
+        <div class="placeholder-icon">🔐</div>
+        <p>Enter any URL, IP, or message and click <strong>Scan</strong> to analyse it for cybersecurity threats.</p>
+      </div>
+    </div>
+
+    <!-- History -->
+    <div class="card history-card">
+      <div class="history-header">
+        <h3 class="card-title">Recent Scans</h3>
+        <button class="btn btn-ghost btn-sm" onclick="loadHistory()">Refresh</button>
+      </div>
+      <div id="historyList" class="history-list">
+        <p class="muted-msg">No scans yet.</p>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<!-- ── About section ───────────────────────────────────── -->
+<section class="about-section">
+  <div class="about-inner">
+    <h3>How it works</h3>
+    <div class="how-grid">
+      <div class="how-item">
+        <div class="how-num">1</div>
+        <div>
+          <strong>Feature Extraction</strong>
+          <p>19 structural features are extracted from URLs (entropy, TLD, subdomains, keywords…). 8 features from IP addresses. 9 features from text messages.</p>
+        </div>
+      </div>
+      <div class="how-item">
+        <div class="how-num">2</div>
+        <div>
+          <strong>Random Forest Classifier</strong>
+          <p>Three separate Random Forest models (200 trees each) classify input as <em>safe</em>, <em>suspicious</em>, or <em>malicious</em>.</p>
+        </div>
+      </div>
+      <div class="how-item">
+        <div class="how-num">3</div>
+        <div>
+          <strong>Explainable Results</strong>
+          <p>Each prediction comes with human-readable explanations based on which features triggered the alert.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>CyberShield — Built for educational purposes. Not a substitute for professional security tools.</p>
+</footer>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>

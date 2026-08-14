@@ -1,0 +1,3 @@
+"""
+CyberShield core package
+"""
