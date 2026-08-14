@@ -4,28 +4,31 @@ CyberShield – AI Cybersecurity Threat Detector
 
 CyberShield is a beginner-friendly cybersecurity project that uses AI/ML-based detection to identify potentially suspicious or malicious inputs. It provides a simple web interface where users can submit input and check whether it appears safe or potentially dangerous.
 
-🚀 Features
+## 🚀 Features
 
-🔍 Detects potentially suspicious inputs
-🛡️ Identifies different types of security-related input
-🤖 Uses machine learning for threat prediction
-🌐 Simple Flask-based web interface
-📊 Displays prediction results
-💻 Runs locally on your computer
+- 🔍 Detects potentially suspicious inputs
+- 🛡️ Identifies different types of security-related input
+- 🤖 Uses machine learning for threat prediction
+- 🌐 Simple Flask-based web interface
+- 📊 Displays prediction results
+- 💻 Runs locally on your computer
 
-🛠️ Technologies Used
-Python
-Flask
-HTML
-CSS
-JavaScript
-Machine Learning
-Pandas
-NumPy
-Scikit-learn
+## 🛠️ Technologies Used
 
-📁 Project Structure
+- Python
+- Flask
+- HTML
+- CSS
+- JavaScript
+- Machine Learning
+- Pandas
+- NumPy
+- Scikit-learn
 
+
+## 📁 Project Structure
+
+```text
 cyber_shield/
 │
 ├── app.py
@@ -42,49 +45,51 @@ cyber_shield/
 │
 └── templates/
     └── index.html
+```
 
-⚙️ Installation
+## ⚙️ Installation
 
-Clone the repository:
+### 1. Clone the Repository
 
+```bash
 git clone YOUR_GITHUB_REPOSITORY_URL
+```
 
-Go to the project folder:
+### 2. Open the Project Folder
 
+```bash
 cd cyber_shield
+```
 
-Install the required libraries:
+### 3. Create a Virtual Environment
 
+```bash
+python -m venv venv
+```
+
+### 4. Activate the Virtual Environment
+
+```powershell
+venv\Scripts\Activate.ps1
+```
+
+### 5. Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-▶️ Run the Project
+## ▶️ Run the Project
 
-Go to the parent folder of cyber_shield:
-
-cd ..
-
-Run the Flask application:
-
+```bash
 python -m cyber_shield.app
+```
 
-Then open your browser and visit:
+### 🌐 Open in Browser
 
+```text
 http://127.0.0.1:5000
-🧪 Example Testing
-
-You can test the application with:
-
-Safe input:
-
-Hello, this is a normal website request.
-
-Suspicious input:
-
-<script>alert('test')</script>
-
-The system will analyze the input and display the prediction.
-
-⚠️ This project is designed for educational purposes. It should not be considered a complete enterprise-level cybersecurity system.
+```
 
 🎯 Purpose
 
