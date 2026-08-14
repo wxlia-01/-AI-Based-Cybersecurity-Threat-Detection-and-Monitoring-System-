@@ -5,12 +5,14 @@ CyberShield – AI Cybersecurity Threat Detector
 CyberShield is a beginner-friendly cybersecurity project that uses AI/ML-based detection to identify potentially suspicious or malicious inputs. It provides a simple web interface where users can submit input and check whether it appears safe or potentially dangerous.
 
 🚀 Features
+
 🔍 Detects potentially suspicious inputs
 🛡️ Identifies different types of security-related input
 🤖 Uses machine learning for threat prediction
 🌐 Simple Flask-based web interface
 📊 Displays prediction results
 💻 Runs locally on your computer
+
 🛠️ Technologies Used
 Python
 Flask
@@ -21,6 +23,7 @@ Machine Learning
 Pandas
 NumPy
 Scikit-learn
+
 📁 Project Structure
 cyber_shield/
 │
