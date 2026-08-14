@@ -98,16 +98,3 @@ Harnoor Singh Walia
 
 BCA Student | Cybersecurity & Technology Enthusiast
 
-One important GitHub tip
-
-Don't put things like this in your README:
-
-C:\Users\LENOVO\.bob\playground
-
-because that's your personal computer path. Use generic commands like cd cyber_shield instead.
-
-Also, if you already have a requirements file, I'd recommend renaming it to:
-
-requirements.txt
-
-because that's the standard Python filename and GitHub users will immediately understand it.
