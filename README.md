@@ -25,6 +25,7 @@ NumPy
 Scikit-learn
 
 📁 Project Structure
+
 cyber_shield/
 │
 ├── app.py
@@ -41,6 +42,7 @@ cyber_shield/
 │
 └── templates/
     └── index.html
+
 ⚙️ Installation
 
 Clone the repository:
@@ -54,6 +56,7 @@ cd cyber_shield
 Install the required libraries:
 
 pip install -r requirements.txt
+
 ▶️ Run the Project
 
 Go to the parent folder of cyber_shield:
